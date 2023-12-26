@@ -1,0 +1,27 @@
+<script>  
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var phone=document.myform.phone.value;  
+    var email=document.myform.email.value;  
+    var address=document.myform.address.value;  
+    var gender=document.myform.gender.value;  
+      
+    if (name==null || name=="" || email==null || email=="" || address==null || address==""){  
+      alert("can't be blank");  
+      return false;  
+    }else if(phone.length<10){  
+      alert("Password must be at least 10 characters long.");  
+      return false;  
+      }  
+    }  
+    </script>  
+    <body>  
+    <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+    Name: <input type="text" name="name"><br/>  
+    Phone: <input type="number" name="phone"><br/>  
+    email: <input type="email" name="email"><br/>  
+    address: <input type="text" name="address"><br/>  
+    gender: <input type="radio" name="gender">male<br/> 
+     <input type="radio" name="gender">female<br/> 
+    <input type="submit" value="register">  
+    </form>  
